@@ -8,6 +8,14 @@ class my_profile extends StatefulWidget {
 class _my_profileState extends State<my_profile> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: Container(
+        decoration: const BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage('profile_bg.jpg'),
+                fit: BoxFit.cover,
+                opacity: 0.3)),
+      ),
+    );
   }
 }

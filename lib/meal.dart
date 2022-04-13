@@ -8,6 +8,14 @@ class meals extends StatefulWidget {
 class _mealsState extends State<meals> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: Container(
+        decoration: const BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage('meal_bg.jpg'),
+                fit: BoxFit.cover,
+                opacity: 0.3)),
+      ),
+    );
   }
 }
