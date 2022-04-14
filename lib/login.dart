@@ -58,20 +58,19 @@ class _State extends State<LoginPage> {
                   ),
                 ),
                 SizedBox(height: 20),
-                FlatButton(
+                	ElevatedButton(
                   onPressed: () {
-                    //forgot password screen
+                    //forgot password screen                                                                                     
                   },
-                  textColor: Colors.blue,
+                  
                   child: Text('Forgot Password'),
                 ),
                 SizedBox(height: 15),
                 Container(
                     height: 50,
                     padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                    child: RaisedButton(
-                      textColor: Colors.white,
-                      color: Colors.grey[800],
+                    child: 	ElevatedButton(
+                     
                       child: Text('Login'),
                       onPressed: () {
                         Navigator.push(
@@ -87,8 +86,8 @@ class _State extends State<LoginPage> {
                     child: Row(
                   children: <Widget>[
                     Text('Does not have account?'),
-                    FlatButton(
-                      textColor: Colors.blue,
+                    	ElevatedButton(
+                      
                       child: Text(
                         'Sign-up',
                         style: TextStyle(fontSize: 20),
