@@ -1,21 +1,13 @@
 import 'package:flutter/material.dart';
 
-class fitnessPage extends StatefulWidget {
+class workout extends StatefulWidget {
   @override
-  State<fitnessPage> createState() => _fitnessPageState();
+  State<workout> createState() => _workoutState();
 }
 
-class _fitnessPageState extends State<fitnessPage> {
+class _workoutState extends State<workout> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        decoration: const BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage('workout_bg.jpeg'),
-                fit: BoxFit.cover,
-                opacity: 0.3)),
-      ),
-    );
+    return Scaffold(body: Text('Akshat'));
   }
 }

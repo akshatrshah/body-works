@@ -11,7 +11,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int index = 0;
-  final screens = [home(), fitnessPage(), meals(), my_profile()];
+  final screens = [home(), workout(), meals(), my_profile()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
