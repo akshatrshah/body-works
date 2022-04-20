@@ -94,8 +94,7 @@ class _State extends State<signupPage> {
                 Container(
                     height: 50,
                     padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                    child: 		ElevatedButton(
-                     
+                    child: ElevatedButton(
                       child: Text('Signup'),
                       onPressed: () {
                         print(nameController.text);

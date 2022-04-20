@@ -39,8 +39,6 @@ class _State extends State<home> {
                           fontSize: 25))),
               SizedBox(height: 15),
               Container(
-                decoration:
-                    BoxDecoration(border: Border.all(color: Colors.blue)),
                 padding: const EdgeInsets.all(10),
                 child: TextField(
                   controller: weightController,
@@ -52,14 +50,24 @@ class _State extends State<home> {
                 ),
               ),
               SizedBox(height: 30),
+              Container(
+                padding: const EdgeInsets.all(10),
+                child: TextField(
+                  controller: weightController,
+                  decoration: const InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'Height(in meters)',
+                      contentPadding: EdgeInsets.all(20),
+                      isDense: true),
+                ),
+              ),
+              SizedBox(height: 30),
               const Text(
                 'Water(in liters):',
                 style: TextStyle(fontSize: 23),
               ),
               Center(
                 child: Container(
-                  decoration:
-                      BoxDecoration(border: Border.all(color: Colors.blue)),
                   child: NumberInputWithIncrementDecrement(
                     controller: TextEditingController(),
                     isInt: true,
@@ -70,8 +78,6 @@ class _State extends State<home> {
               ),
               SizedBox(height: 30),
               Container(
-                decoration:
-                    BoxDecoration(border: Border.all(color: Colors.blue)),
                 child: Column(
                   children: <Widget>[
                     // ignore: prefer_const_constructors

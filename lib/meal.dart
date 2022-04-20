@@ -1,26 +1,27 @@
+import 'package:body_works/beginner_workout.dart';
+import 'package:body_works/dinner.dart';
+import 'package:body_works/lunch.dart';
+import 'package:body_works/snacks.dart';
+import 'package:body_works/timer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:body_works/constants.dart';
-import 'package:body_works/widgets/bottom_nav.dart';
 import 'package:body_works/widgets/search_bar.dart';
+
+import 'breakFast.dart';
 
 class meals extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
-      bottomNavigationBar: BottomNavBar(),
       body: Stack(
         children: <Widget>[
           Container(
-            height: size.height * .45,
+            height: size.height * .5,
             decoration: BoxDecoration(
-              color: kBlueColor,
-              image: DecorationImage(
-                image: AssetImage("an.png"),
-                fit: BoxFit.fitWidth,
-                
-              ),
+              color: kBlueLightColor,
+              //image: DecorationImage(image: AssetImage("workout_bg.jpg")),
             ),
           ),
           SafeArea(
@@ -34,7 +35,7 @@ class meals extends StatelessWidget {
                       height: size.height * 0.05,
                     ),
                     Text(
-                      "Meals",
+                      "Diet Plan",
                       style: Theme.of(context)
                           .textTheme
                           .displayMedium
@@ -42,59 +43,115 @@ class meals extends StatelessWidget {
                     ),
                     SizedBox(height: 10),
                     Text(
-                      "Choose your meal",
+                      "Count your calories",
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     SizedBox(height: 10),
                     SizedBox(
                       width: size.width * .6, // it just take 60% of total width
-                      child: Text(
-                        "Live happier and healthier by eating right",
-                      ),
                     ),
                     SizedBox(
                       width: size.width * .5, // it just take the 50% width
-                      child: SearchBar(),
                     ),
                     Wrap(
                       spacing: 20,
                       runSpacing: 20,
                       children: <Widget>[
-                        SeassionCard(
-                          seassionNum: "meal 1",
-                          isDone: true,
-                          press: () {},
+                        Card(
+                          child: Container(
+                            height: 250,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                              image: AssetImage('assets/breakfast.jpg'),
+                              fit: BoxFit.cover,
+                            )),
+                            child: ListTile(
+                              title: Text(" Breakfast ",
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                      backgroundColor: Colors.white)),
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => breakfast()));
+                              },
+                            ),
+                          ),
                         ),
-                        SeassionCard(
-                          seassionNum: "meal 2",
-                          press: () {},
+                        Card(
+                          child: Container(
+                            height: 250,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                              image: AssetImage('assets/lunch.jpeg'),
+                              fit: BoxFit.cover,
+                            )),
+                            child: ListTile(
+                              title: Text(" Lunch ",
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                      backgroundColor: Colors.white)),
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => lunch()));
+                              },
+                            ),
+                          ),
                         ),
-                        SeassionCard(
-                          seassionNum: "meal 3",
-                          press: () {},
+                        Card(
+                          child: Container(
+                            height: 250,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                              image: AssetImage('assets/dinner.jpg'),
+                              fit: BoxFit.cover,
+                            )),
+                            child: ListTile(
+                              title: Text(" Dinner ",
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                      backgroundColor: Colors.white)),
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => dinner()));
+                              },
+                            ),
+                          ),
                         ),
-                        SeassionCard(
-                          seassionNum: "meal 4",
-                          press: () {},
-                        ),
-                        SeassionCard(
-                          seassionNum: "meal 5",
-                          press: () {},
-                        ),
-                        SeassionCard(
-                          seassionNum: "meal 6",
-                          press: () {},
+                        Card(
+                          child: Container(
+                            height: 250,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                              image: AssetImage('assets/snacks.jpeg'),
+                              fit: BoxFit.cover,
+                            )),
+                            child: ListTile(
+                              title: Text(" Snacks ",
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                      backgroundColor: Colors.white)),
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => snacks()));
+                              },
+                            ),
+                          ),
                         ),
                       ],
                     ),
                     SizedBox(height: 20),
-                    Text(
-                      "Meals description",
-                      style: Theme.of(context)
-                          .textTheme
-                          .titleMedium
-                          .copyWith(fontWeight: FontWeight.bold),
-                    ),
                     Container(
                       margin: EdgeInsets.symmetric(vertical: 20),
                       padding: EdgeInsets.all(10),
@@ -121,13 +178,7 @@ class meals extends StatelessWidget {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Text(
-                                  "Basic 2",
-                                  style: Theme.of(context).textTheme.subtitle1,
-                                ),
-                                Text("Start your deepen you practice")
-                              ],
+                              children: <Widget>[],
                             ),
                           ),
                           Padding(

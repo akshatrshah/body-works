@@ -33,7 +33,6 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
-
   introduction_screen: ^1.0.9
   email_validator: ^2.0.1
   flutter_email_sender: ^5.0.2
@@ -52,6 +51,7 @@ dependencies:
   fl_chart: ^0.50.1
   flutter_audio_query: ^0.3.5+6
   mask_text_input_formatter: ^2.3.0
+  flutter_svg: ^1.0.3
 
 dev_dependencies:
   flutter_test:
@@ -88,6 +88,24 @@ flutter:
     - workout_bg.jpeg
     - profile_bg.jpg
     - meal_bg.jpg
+    - meals.png
+    - plank.webp
+    - Pushup.jpeg
+    - situps.jpg
+    - toetouch.jpeg
+    - spotjog.jpg
+    - breakfast.jpg
+    - lunch.jpeg
+    - dinner.jpg
+    - snacks.jpeg
+    - burpees.jpg
+    - cobra stretch.webp
+    - inclined pushup.jpg
+    - jumping jacks.png
+    - mountain climber.jpg
+    - pushup and rotation.jpg
+    - jumping squats.jpg
+    - lunges.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
