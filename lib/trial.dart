@@ -35,7 +35,7 @@ class AppWidgetState extends State<AppWidget> {
         return AlertDialog(
           title: new Text('Please Enter Value in Text Field.'),
           actions: <Widget>[
-            FlatButton(
+            ElevatedButton(
               child: new Text("OK"),
               onPressed: () {
                 Navigator.of(context).pop();
