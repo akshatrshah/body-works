@@ -4,7 +4,7 @@ import 'package:body_works/widgets/myColors.dart';
 import 'package:body_works/widgets/emailBox.dart';
 import 'package:body_works/widgets/responsive.dart';
 
-var backgroundImage ='assets/img7.jpeg';
+var backgroundImage = 'assets/img7.jpeg';
 
 class Body extends StatelessWidget {
   @override
@@ -31,13 +31,11 @@ class LargeScreen extends StatelessWidget {
   //Adds background Image
   Widget addBackground() {
     return FractionallySizedBox(
-      alignment: Alignment.centerRight, //to keep images aligned to right
-      widthFactor: .6, //covers about 60% of the screen width
-      child: Image.network(
-        backgroundImage,
-        scale: .85,
-      ),
-    );
+        alignment: Alignment.centerRight, //to keep images aligned to right
+        widthFactor: .6, //covers about 60% of the screen width
+        child: Container(
+          child: Image(image: AssetImage('assets/img7.jpeg')),
+        ));
   }
 
   //Adds welcome text
@@ -120,12 +118,7 @@ class SmallScreen extends StatelessWidget {
             SizedBox(
               height: 30,
             ),
-            Center(
-              child: Image.network(
-                backgroundImage,
-                scale: 1,
-              ),
-            ),
+            Center(child: Image(image: AssetImage('assets/img7.jpeg'))),
             Padding(
               padding: EdgeInsets.only(left: 12.0, top: 20),
               child: Text(Strings.subscribeText),

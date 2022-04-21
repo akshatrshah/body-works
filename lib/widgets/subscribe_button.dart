@@ -4,7 +4,7 @@ import 'package:body_works/widgets/strings.dart';
 import 'package:body_works/widgets/responsive.dart';
 
 class SubscribeButton extends StatelessWidget {
-  var emailImage = "assets/email.png";
+  var emailImage = Container();
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +36,6 @@ class SubscribeButton extends StatelessWidget {
     );
   }
 
-
   Widget buildButton(BuildContext context) {
     if (ResponsiveWidget.isSmallScreen(context))
       return buildSmallButton(context);
@@ -55,24 +54,30 @@ class SubscribeButton extends StatelessWidget {
               fontSize: ResponsiveWidget.isSmallScreen(context)
                   ? 12
                   : ResponsiveWidget.isMediumScreen(context)
-                  ? 12
-                  : 16,
+                      ? 12
+                      : 16,
               letterSpacing: 1),
         ),
         SizedBox(
           width: ResponsiveWidget.isSmallScreen(context)
               ? 4
-              : ResponsiveWidget.isMediumScreen(context) ? 6 : 8,
+              : ResponsiveWidget.isMediumScreen(context)
+                  ? 6
+                  : 8,
         ),
         Image.network(
-          emailImage,
+          'subs',
           color: MyColors.white1,
           width: ResponsiveWidget.isSmallScreen(context)
               ? 12
-              : ResponsiveWidget.isMediumScreen(context) ? 12 : 20,
+              : ResponsiveWidget.isMediumScreen(context)
+                  ? 12
+                  : 20,
           height: ResponsiveWidget.isSmallScreen(context)
               ? 12
-              : ResponsiveWidget.isMediumScreen(context) ? 12 : 20,
+              : ResponsiveWidget.isMediumScreen(context)
+                  ? 12
+                  : 20,
         )
       ],
     );
@@ -81,18 +86,7 @@ class SubscribeButton extends StatelessWidget {
   Widget buildSmallButton(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        Image.network(
-          emailImage,
-          color: MyColors.white1,
-          width: ResponsiveWidget.isSmallScreen(context)
-              ? 12
-              : ResponsiveWidget.isMediumScreen(context) ? 12 : 20,
-          height: ResponsiveWidget.isSmallScreen(context)
-              ? 12
-              : ResponsiveWidget.isMediumScreen(context) ? 12 : 20,
-        )
-      ],
+      children: <Widget>[Icon(Icons.mail)],
     );
   }
 }

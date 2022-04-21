@@ -1,4 +1,3 @@
-import 'package:body_works/widgets/subscribe_button.dart';
 import 'package:flutter/material.dart';
 import 'package:body_works/widgets/myColors.dart';
 import 'package:body_works/body.dart';
@@ -17,10 +16,9 @@ class home extends StatefulWidget {
 class _State extends State<home> {
   TextEditingController nameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
-  
 
   @override
-@override
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Body Works',
@@ -51,4 +49,3 @@ class MyHomePage extends StatelessWidget {
     );
   }
 }
-
