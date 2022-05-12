@@ -1,4 +1,5 @@
 import 'package:body_works/login.dart';
+import 'package:body_works/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
@@ -40,7 +41,7 @@ class onboarding extends StatelessWidget {
           onDone: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => LoginPage()),
+              MaterialPageRoute(builder: (context) => LoginScreen()),
             );
           },
         ),
