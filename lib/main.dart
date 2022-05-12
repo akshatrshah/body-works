@@ -1,3 +1,4 @@
+import 'package:body_works/fitness_page.dart';
 import 'package:flutter/material.dart';
 import 'package:body_works/onboarding.dart';
 

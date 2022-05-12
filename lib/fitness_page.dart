@@ -1,24 +1,9 @@
 import 'package:body_works/beginner_workout.dart';
-import 'package:body_works/horizontallist.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:body_works/constants.dart';
-import 'package:body_works/widgets/search_bar.dart';
-
+import 'package:flutter_linkify/flutter_linkify.dart';
 import 'expert_workout.dart';
 import 'intermediate_workout.dart';
-
-class CardItem {
-  final String urlimage;
-  final String title;
-  final String subtitle;
-
-  const CardItem({
-    this.urlimage,
-    this.title,
-    this.subtitle,
-  });
-}
 
 class workout extends StatelessWidget {
   @override
@@ -110,10 +95,46 @@ class workout extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(
-                      height: 50,
-                    ),
-                    Text('Akshat')
+                    SizedBox(height: 20),
+                    Container(
+                        height: 256,
+                        margin: EdgeInsets.symmetric(vertical: 20),
+                        padding: EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(13),
+                          boxShadow: [
+                            BoxShadow(
+                              offset: Offset(0, 17),
+                              blurRadius: 23,
+                              spreadRadius: -13,
+                              color: kShadowColor,
+                            ),
+                          ],
+                        ),
+                        child: SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: Row(
+                            children: [
+                              buildcard1(),
+                              SizedBox(
+                                width: 12,
+                              ),
+                              buildcard2(),
+                              SizedBox(
+                                width: 12,
+                              ),
+                              buildcard3(),
+                              SizedBox(
+                                width: 12,
+                              ),
+                              buildcard4(),
+                              SizedBox(
+                                width: 12,
+                              ),
+                            ],
+                          ),
+                        ))
                   ],
                 ),
               ),
@@ -124,9 +145,61 @@ class workout extends StatelessWidget {
     );
   }
 
-  Widget buildcard() => Container(
-        width: 200,
-        color: Colors.red,
+  Widget buildcard1() => Container(
+          child: ElevatedButton(
+              child: Card(
+        child: Column(children: [
+          Text('Bully Juice'),
+          Image.network(
+            'https://yt3.ggpht.com/ytc/AKedOLTOA5GsyQKKxTmfbit4Y29o_lcPgCiXtaiWKj2nDw=s900-c-k-c0x00ffffff-no-rj',
+            width: 200,
+            height: 200,
+          )
+        ]),
+      )));
+  Widget buildcard2() => Container(
+        child: Column(children: [
+          Linkify(
+            onOpen: (link) => print("Clicked ${link.url}!"),
+            text: "https://www.youtube.com/watch?v=oAPCPjnU1wA",
+          ),
+          Text('Fraser Wilson'),
+          Image.network(
+            'https://lirp.cdn-website.com/96c900e6/dms3rep/multi/opt/WP-2038x3000-ad75e7f2-46890ba8-396w.jpg',
+            width: 200,
+            height: 200,
+          )
+        ]),
+      );
+  Widget buildcard3() => Container(
+        child: Column(children: [
+          Text('THENX'),
+          Image.network(
+            'https://i1.sndcdn.com/artworks-000485979492-jhrv5y-t500x500.jpg',
+            width: 200,
+            height: 200,
+          )
+        ]),
+      );
+  Widget buildcard4() => Container(
+        child: Column(children: [
+          Text('Fitnesstype'),
+          Image.network(
+            'https://yt3.ggpht.com/ytc/AKedOLTnTHNsYfyTubTyy04dVi6Jpr4itwVT_fouLJOw-Q=s900-c-k-c0x00ffffff-no-rj',
+            width: 200,
+            height: 200,
+          )
+        ]),
+      );
+  Widget buildcard5() => Container(
+        child: Column(children: [
+          Text('Name1'),
+          Image.network(
+            'https://yt3.ggpht.com/ytc/AKedOLTOA5GsyQKKxTmfbit4Y29o_lcPgCiXtaiWKj2nDw=s900-c-k-c0x00ffffff-no-rj',
+            width: 200,
+            height: 200,
+          )
+        ]),
       );
 }
 
