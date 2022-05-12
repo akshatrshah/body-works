@@ -4,6 +4,7 @@ import 'package:body_works/constants.dart';
 import 'package:flutter_linkify/flutter_linkify.dart';
 import 'expert_workout.dart';
 import 'intermediate_workout.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class workout extends StatelessWidget {
   @override
@@ -159,10 +160,6 @@ class workout extends StatelessWidget {
       )));
   Widget buildcard2() => Container(
         child: Column(children: [
-          Linkify(
-            onOpen: (link) => print("Clicked ${link.url}!"),
-            text: "https://www.youtube.com/watch?v=oAPCPjnU1wA",
-          ),
           Text('Fraser Wilson'),
           Image.network(
             'https://lirp.cdn-website.com/96c900e6/dms3rep/multi/opt/WP-2038x3000-ad75e7f2-46890ba8-396w.jpg',
