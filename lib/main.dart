@@ -1,10 +1,5 @@
-import 'package:body_works/dashboard.dart';
-import 'package:body_works/exercises.dart';
-import 'package:body_works/fitness_page.dart';
-import 'package:body_works/home_view.dart';
-import 'package:body_works/onboarding.dart';
-import 'package:body_works/timer.dart';
 import 'package:flutter/material.dart';
+import 'package:body_works/onboarding.dart';
 
 void main() => runApp(MyApp());
 

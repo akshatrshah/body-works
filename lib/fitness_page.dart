@@ -1,4 +1,5 @@
 import 'package:body_works/beginner_workout.dart';
+import 'package:body_works/horizontallist.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:body_works/constants.dart';
@@ -6,6 +7,18 @@ import 'package:body_works/widgets/search_bar.dart';
 
 import 'expert_workout.dart';
 import 'intermediate_workout.dart';
+
+class CardItem {
+  final String urlimage;
+  final String title;
+  final String subtitle;
+
+  const CardItem({
+    this.urlimage,
+    this.title,
+    this.subtitle,
+  });
+}
 
 class workout extends StatelessWidget {
   @override
@@ -48,80 +61,59 @@ class workout extends StatelessWidget {
                       width: size.width * .6, // it just take 60% of total width
                     ),
                     SizedBox(
-                      width: size.width * .5, // it just take the 50% width
-                      child: SearchBar(),
+                      height: 80,
                     ),
                     Wrap(
-                      spacing: 20,
-                      runSpacing: 20,
+                      spacing: 40,
+                      runSpacing: 50,
                       children: <Widget>[
-                        SeassionCard(
-                          seassionNum: "Beginners",
-                          press: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: ((context) => beginnerWorkout())));
-                          },
+                        Container(
+                          width: 2000,
+                          color: Colors.red,
+                          child: SeassionCard(
+                            seassionNum: "Beginners",
+                            press: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: ((context) =>
+                                          beginnerWorkout())));
+                            },
+                          ),
                         ),
-                        SeassionCard(
-                          seassionNum: "Intermediate",
-                          press: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: ((context) =>
-                                        intermediateWorkout())));
-                          },
+                        Container(
+                          width: 2000,
+                          color: Colors.red,
+                          child: SeassionCard(
+                            seassionNum: "Intermediate",
+                            press: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: ((context) =>
+                                          intermediateWorkout())));
+                            },
+                          ),
                         ),
-                        SeassionCard(
-                          seassionNum: "Expert",
-                          press: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: ((context) => expertWorkout())));
-                          },
+                        Container(
+                          width: 2000,
+                          color: Colors.red,
+                          child: SeassionCard(
+                            seassionNum: "Expert",
+                            press: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: ((context) => expertWorkout())));
+                            },
+                          ),
                         ),
                       ],
                     ),
-                    SizedBox(height: 20),
-                    Container(
-                      margin: EdgeInsets.symmetric(vertical: 20),
-                      padding: EdgeInsets.all(10),
-                      height: 90,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(13),
-                        boxShadow: [
-                          BoxShadow(
-                            offset: Offset(0, 17),
-                            blurRadius: 23,
-                            spreadRadius: -13,
-                            color: kShadowColor,
-                          ),
-                        ],
-                      ),
-                      child: Row(
-                        children: <Widget>[
-                          SvgPicture.asset(
-                            "assets/icons/Meditation_women_small.svg",
-                          ),
-                          SizedBox(width: 20),
-                          Expanded(
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[],
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.all(10),
-                            child: SvgPicture.asset("assets/icons/Lock.svg"),
-                          ),
-                        ],
-                      ),
-                    )
+                    SizedBox(
+                      height: 50,
+                    ),
+                    Text('Akshat')
                   ],
                 ),
               ),
@@ -131,6 +123,11 @@ class workout extends StatelessWidget {
       ),
     );
   }
+
+  Widget buildcard() => Container(
+        width: 200,
+        color: Colors.red,
+      );
 }
 
 class SeassionCard extends StatelessWidget {

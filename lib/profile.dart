@@ -31,11 +31,6 @@ class _MyHomePageState extends State<MyHomePage> {
     return MaterialApp(
       title: 'Profile Challenge 01',
       home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: kBlueLightColor,
-          title: Text('Profile'),
-          centerTitle: true,
-        ),
         body: ListView(
           children: <Widget>[
             Container(

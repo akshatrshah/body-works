@@ -4,7 +4,7 @@ import 'package:body_works/widgets/myColors.dart';
 import 'package:body_works/widgets/strings.dart';
 import 'package:body_works/widgets/responsive.dart';
 
-class EmailBox extends StatelessWidget {
+class water extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -31,12 +31,12 @@ class EmailBox extends StatelessWidget {
                 flex: 8,
                 child: TextField(
                   decoration: InputDecoration(
-                      border: InputBorder.none, hintText: 'Height'),
+                      border: InputBorder.none, hintText: 'Water'),
                 ),
               ),
               Expanded(
                 flex: 2,
-                child: Text('metres'),
+                child: Text('glasses'),
               )
             ],
           ),

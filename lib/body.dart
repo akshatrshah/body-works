@@ -1,3 +1,5 @@
+import 'package:body_works/widgets/body_weight.dart';
+import 'package:body_works/widgets/water.dart';
 import 'package:flutter/material.dart';
 import 'package:body_works/widgets/strings.dart';
 import 'package:body_works/widgets/myColors.dart';
@@ -121,12 +123,23 @@ class SmallScreen extends StatelessWidget {
             Center(child: Image(image: AssetImage('assets/img7.jpeg'))),
             Padding(
               padding: EdgeInsets.only(left: 12.0, top: 20),
-              child: Text(Strings.subscribeText),
+              child: Text(
+                "Let's get updated",
+                style: TextStyle(fontSize: 20),
+              ),
             ),
             SizedBox(
               height: 30,
             ),
             EmailBox(),
+            SizedBox(
+              height: 30,
+            ),
+            weight(),
+            SizedBox(
+              height: 30,
+            ),
+            water(),
             SizedBox(
               height: 30,
             )

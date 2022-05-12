@@ -25,17 +25,16 @@ class _beginnerWorkoutState extends State<beginnerWorkout> {
             Container(
               child: Column(
                 children: const [
-                  Padding(
-                    padding: EdgeInsets.all(16.0),
-                    child: Text(
-                      'The last three or four reps is what makes the muscle grow. This area of pain divides a champion from someone who is not a champion.',
-                      style: TextStyle(fontSize: 25),
+                  Card(
+                    child: Padding(
+                      padding: EdgeInsets.all(20),
+                      child: Text(
+                        'The last three or four reps is what makes the muscle grow. This area of pain divides a champion from someone who is not a champion.\n\n~Arnold Schwarzenegger',
+                        style: TextStyle(
+                            fontStyle: FontStyle.italic, fontSize: 20),
+                      ),
                     ),
                   ),
-                  Text(
-                    '~Arnold Schwarzenegger',
-                    textAlign: TextAlign.right,
-                  )
                 ],
               ),
             ),

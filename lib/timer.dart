@@ -91,7 +91,7 @@ class _workout_timerState extends State<workout_timer> {
             ),
           )
         : ButtonWidget(
-            text: 'Play/Resume',
+            text: 'Start/Resume',
             onClicked: () {
               startTimer();
             },
