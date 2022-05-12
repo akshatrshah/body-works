@@ -1,20 +1,15 @@
 import 'package:body_works/dashboard.dart';
 import 'package:body_works/widgets/myColors.dart';
 import 'package:flutter/material.dart';
-import 'package:body_works/signup.dart';
-import 'package:flutter/services.dart';
-import 'home_page.dart';
-import 'package:flutter_login/theme.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_login/flutter_login.dart';
 
-const users = const {
+const users = {
   'dribbble@gmail.com': '12345',
   'hunter@gmail.com': 'hunter',
 };
 
 class LoginScreen extends StatelessWidget {
-  Duration get loginTime => Duration(milliseconds: 2250);
+  Duration get loginTime => const Duration(milliseconds: 2250);
 
   Future<String> _authUser(LoginData data) {
     debugPrint('Name: ${data.name}, Password: ${data.password}');

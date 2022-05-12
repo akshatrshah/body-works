@@ -1,13 +1,32 @@
 import 'package:body_works/beginner_workout.dart';
 import 'package:flutter/material.dart';
 import 'package:body_works/constants.dart';
-import 'package:flutter_linkify/flutter_linkify.dart';
 import 'expert_workout.dart';
 import 'intermediate_workout.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class workout extends StatelessWidget {
   @override
+  final Uri _url = Uri.parse('https://flutter.dev');
+  void _launchUrl() async {
+    if (!await launchUrl(_url)) throw 'Could not launch $_url';
+  }
+
+  final Uri _url1 = Uri.parse('https://flutter.dev');
+  void _launchUrl1() async {
+    if (!await launchUrl(_url)) throw 'Could not launch $_url';
+  }
+
+  final Uri _url2 = Uri.parse('https://flutter.dev');
+  void _launchUrl2() async {
+    if (!await launchUrl(_url)) throw 'Could not launch $_url';
+  }
+
+  final Uri _url3 = Uri.parse('https://flutter.dev');
+  void _launchUrl3() async {
+    if (!await launchUrl(_url)) throw 'Could not launch $_url';
+  }
+
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
@@ -17,7 +36,6 @@ class workout extends StatelessWidget {
             height: size.height * .5,
             decoration: BoxDecoration(
               color: kBlueLightColor,
-              //image: DecorationImage(image: AssetImage("workout_bg.jpg")),
             ),
           ),
           SafeArea(
@@ -31,7 +49,7 @@ class workout extends StatelessWidget {
                       height: size.height * 0.05,
                     ),
                     Text(
-                      "Workout",
+                      "Work",
                       style: Theme.of(context)
                           .textTheme
                           .displayMedium
@@ -147,18 +165,24 @@ class workout extends StatelessWidget {
   }
 
   Widget buildcard1() => Container(
-          child: ElevatedButton(
-              child: Card(
-        child: Column(children: [
-          Text('Bully Juice'),
-          Image.network(
-            'https://yt3.ggpht.com/ytc/AKedOLTOA5GsyQKKxTmfbit4Y29o_lcPgCiXtaiWKj2nDw=s900-c-k-c0x00ffffff-no-rj',
-            width: 200,
-            height: 200,
-          )
-        ]),
-      )));
+      color: Colors.white,
+      child: ElevatedButton(
+          onPressed: _launchUrl,
+          child: Card(
+            child: Column(children: [
+              Text('Bully Juice'),
+              Image.network(
+                'https://yt3.ggpht.com/ytc/AKedOLTOA5GsyQKKxTmfbit4Y29o_lcPgCiXtaiWKj2nDw=s900-c-k-c0x00ffffff-no-rj',
+                width: 200,
+                height: 200,
+              )
+            ]),
+          )));
   Widget buildcard2() => Container(
+      color: Colors.white,
+      child: ElevatedButton(
+        onPressed: _launchUrl1,
+        //style: ButtonStyle(backgroundColor: ),
         child: Column(children: [
           Text('Fraser Wilson'),
           Image.network(
@@ -167,8 +191,10 @@ class workout extends StatelessWidget {
             height: 200,
           )
         ]),
-      );
+      ));
   Widget buildcard3() => Container(
+          child: ElevatedButton(
+        onPressed: _launchUrl2,
         child: Column(children: [
           Text('THENX'),
           Image.network(
@@ -177,8 +203,10 @@ class workout extends StatelessWidget {
             height: 200,
           )
         ]),
-      );
+      ));
   Widget buildcard4() => Container(
+          child: ElevatedButton(
+        onPressed: _launchUrl3,
         child: Column(children: [
           Text('Fitnesstype'),
           Image.network(
@@ -187,17 +215,7 @@ class workout extends StatelessWidget {
             height: 200,
           )
         ]),
-      );
-  Widget buildcard5() => Container(
-        child: Column(children: [
-          Text('Name1'),
-          Image.network(
-            'https://yt3.ggpht.com/ytc/AKedOLTOA5GsyQKKxTmfbit4Y29o_lcPgCiXtaiWKj2nDw=s900-c-k-c0x00ffffff-no-rj',
-            width: 200,
-            height: 200,
-          )
-        ]),
-      );
+      ));
 }
 
 class SeassionCard extends StatelessWidget {
