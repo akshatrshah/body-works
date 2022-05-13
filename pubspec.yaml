@@ -114,6 +114,8 @@ flutter:
     - jumping squats.jpg
     - lunges.jpeg
     - email.png
+    - bully_juice.mp4
+    - fraser_wilson.mp4
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

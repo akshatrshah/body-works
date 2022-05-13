@@ -4,7 +4,7 @@ import 'package:video_player/video_player.dart';
 class VideoDemo extends StatefulWidget {
   VideoDemo() : super();
 
-  final String title = "Video Demo";
+  final String title = "Bully Juice video";
 
   @override
   VideoDemoState createState() => VideoDemoState();
@@ -17,9 +17,9 @@ class VideoDemoState extends State<VideoDemo> {
 
   @override
   void initState() {
-    _controller = VideoPlayerController.network(
-        "https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4");
-    //_controller = VideoPlayerController.asset("videos/sample_video.mp4");
+    //_controller = VideoPlayerController.network(
+     //   "https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4");
+    _controller = VideoPlayerController.asset('bully_juice.mp4');
     _initializeVideoPlayerFuture = _controller.initialize();
     _controller.setLooping(true);
     _controller.setVolume(1.0);
