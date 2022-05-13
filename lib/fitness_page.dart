@@ -7,17 +7,17 @@ import 'package:url_launcher/url_launcher.dart';
 
 class workout extends StatelessWidget {
   @override
-  final Uri _url = Uri.parse('https://flutter.dev');
+  final Uri _url = Uri.parse('https://www.youtube.com/watch?v=oAPCPjnU1wA');
   void _launchUrl() async {
     if (!await launchUrl(_url)) throw 'Could not launch $_url';
   }
 
-  final Uri _url1 = Uri.parse('https://flutter.dev');
+  final Uri _url1 = Uri.parse('https://www.youtube.com/watch?v=UoC_O3HzsH0');
   void _launchUrl1() async {
     if (!await launchUrl(_url)) throw 'Could not launch $_url';
   }
 
-  final Uri _url2 = Uri.parse('https://flutter.dev');
+  final Uri _url2 = Uri.parse('');
   void _launchUrl2() async {
     if (!await launchUrl(_url)) throw 'Could not launch $_url';
   }
@@ -167,7 +167,7 @@ class workout extends StatelessWidget {
   Widget buildcard1() => Container(
       color: Colors.white,
       child: ElevatedButton(
-          onPressed: _launchUrl,
+          onPressed: () {},
           child: Card(
             child: Column(children: [
               Text('Bully Juice'),
@@ -181,7 +181,7 @@ class workout extends StatelessWidget {
   Widget buildcard2() => Container(
       color: Colors.white,
       child: ElevatedButton(
-        onPressed: _launchUrl1,
+        onPressed: _launchUrl,
         //style: ButtonStyle(backgroundColor: ),
         child: Column(children: [
           Text('Fraser Wilson'),
@@ -194,7 +194,7 @@ class workout extends StatelessWidget {
       ));
   Widget buildcard3() => Container(
           child: ElevatedButton(
-        onPressed: _launchUrl2,
+        onPressed: _launchUrl,
         child: Column(children: [
           Text('THENX'),
           Image.network(
@@ -206,7 +206,7 @@ class workout extends StatelessWidget {
       ));
   Widget buildcard4() => Container(
           child: ElevatedButton(
-        onPressed: _launchUrl3,
+        onPressed: _launchUrl,
         child: Column(children: [
           Text('Fitnesstype'),
           Image.network(
